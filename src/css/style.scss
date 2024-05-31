@@ -1,16 +1,113 @@
-$color: rebeccapurple;
+$content-max-width: 1400px;
+$clr-text: hsl(0, 0%, 10%);
+$clr-primary: hsl(104, 57%, 24%);
+$fw-light: 200;
+$fw-normal: 400;
+$fw-bold: 600;
+$fw-black: 900;
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  color-scheme: dark light;
+  hanging-punctuation: first last;
+}
 
 body {
-  font-family: system-ui;
-  background-color: #f9f9f9;
+  font-family: system-ui, sans-serif;
+  font-size: 1.125rem;
+  color: $clr-text;
+  line-height: 1.6;
+  min-height: 100svh;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h4, h5, h6 {
+  text-wrap: balance;
+}
+p {
+  max-width: 75ch;
+  text-wrap: pretty;
+  margin-bottom: 1rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+  }
 }
 
 h1 {
-  color: $color;
-  width: fit-content;
-  margin-inline: auto;
+  font-size: 4.125rem;
+  font-weight: $fw-bold;
+}
+h2 {
+  font-size: 2.75rem;
+}
+h3 {
+  font-size: 1.625rem;
+}
+
+.es-logo {
+  font-family: Superclarendon, 'Bookman Old Style', 'URW Bookman', serif;
+  color: $clr-primary;
+}
+.es-association-logo {
+  max-width: 300px;
+}
+
+header {
+  position: absolute;
+  top: 2rem; left: 2rem;
 }
 
 .content-section {
-  min-height: 100vh;
+  //min-height: 100vh;
+  width: min($content-max-width, 100% - 4rem);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 62% 38%;
+  gap: 2rem;
+  //background-color:orange;
+  margin-bottom: 5rem;
+
+  align-items: center;
+  .img-panel {
+    height: 100%;
+    background-color: red;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }
+.hero-section {
+  height: 80vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  & > * {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+  }
+  img {
+    height: inherit;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+
