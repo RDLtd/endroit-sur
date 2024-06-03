@@ -3,15 +3,21 @@ layout: base.njk
 title: endroit sûr
 ---
 
-<main>
-    <section class="hero-section">
-        <img src="images/hero.jpg" alt="">
-        <div>
-            <h2>The Home Of UK Rental Accommodation</h2>
-            <p>Join The Revolution: Transforming the UK rental landscape together by providing safe, stable, quality homes and fostering a thriving community for tenants and investors alike.</p>
-            <p>Ready to be part of the movement.</p>
-            <p>Join our network today!</p>
-            <button>Book a Call</button>
+    <section id="home" class="hero-section">
+        <img src="https://res.cloudinary.com/rdl/image/upload/e_blur:60,f_auto/v1717420082/endroit-sur/hero.jpg" alt="">
+        <div class="hero-content">
+            <div id="scroll-watcher"  class="hero-copy">
+                <div class="es-logo">
+                    <h1>{{ title }}</h1>
+                    <span class="strap">Your Safespace</span>
+                </div>
+                <h2>The Home Of UK Rental Accommodation</h2>
+                <p>Join The Revolution: Transforming the UK rental landscape together by providing safe, stable, quality
+                   homes and fostering a thriving community for tenants and investors alike.</p>
+                <p>Ready to be part of the movement.</p>
+                <p>Join our network today!</p>
+                <button class="btn">Book a Call</button>
+            </div>
         </div>
 
 
@@ -20,10 +26,17 @@ title: endroit sûr
 
     </section>
 
-    <section class="content-section">
-        <h2>Community</h2>
+
+    <section id="community" class="content-section-community">
+        <h2>Join the Community</h2>
+        <div class="logo-grid">
+            <img class="es-association-logo" src="images/the-property-ombudsman.svg" alt="Property Ombudsman Logo">
+            <img class="es-association-logo" src="images/arla.png" alt="Arla Propertymark logo">
+        </div>
+
+
     </section>
-    <section class="content-section">
+    <section id="overview" class="content-section">
         <div>
             <p>Welcome to endroit sûr, where we are transforming the UK property rental landscape. Our mission is simple yet ambitious: to become the home of UK rental accommodation.</p>
             <p>As a leading property investor, lettings, and property management firm headquartered in the historic city
@@ -44,7 +57,7 @@ title: endroit sûr
             <img src="images/overview.jpg" alt="">
         </div>
     </section>
-    <section class="content-section">
+    <section id="investment" class="content-section">
         <div>
             <h2>Elevate Your Investment Game</h2>
             <h3>Transforming UK Rentals</h3>
@@ -70,7 +83,7 @@ title: endroit sûr
             <img src="images/investment.jpg" alt="">
         </div>
     </section>
-    <section class="content-section">
+    <section id="partners" class="content-section">
         <div>
             <h2>Join the Revolution</h2>
             <p>At endroit sûr, we are proud to be part of a dynamic network transforming the rental market across the
@@ -103,7 +116,7 @@ title: endroit sûr
             <img src="images/partners.jpg" alt="">
         </div>
     </section>
-    <section class="content-section">
+    <section id="tenants" class="content-section">
 
         <div>
             <h2>Discover Your Ideal Home</h2>
@@ -139,41 +152,46 @@ title: endroit sûr
                part of a community that values you and your aspirations.</p>
             <p>Together, let's create a place where you can truly thrive.</p>
             <p>Click the button below to reach out to us. We can't wait to hear from you!</p>
-            <button>Book a Call</button>
+            <button>Register your interest</button>
         </div>
         <div class="img-panel">
             <img src="images/tenants.jpg" alt="">
         </div>
     </section>
-    <section class="content-section">
+    <section id="contact" class="content-section-contacts">
         <div>
             <h2>Contact us</h2>
-            hello@endroitsur.co.uk
+            <a href="mailto:hello@endroitsur.co.uk">hello@endroitsur.co.uk</a>
+        </div>
+        <div>
+            <h2>Follow us</h2>
+            <a href="#">Facebook</a> | <a href="#">LinkedIn</a>
+        </div>
+        <div>
+            <h2>Legal</h2>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+            </ul>
+        </div>
+        <div>
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter:</p>
+        </div>
+        <div>
+            <h2>Customer Service</h2>
+            <p><a href="#">Help Centre</a></p>
+        </div>
 
-            Follow Us:
-            Facebook | LinkedIn
-        </div>
-        <div>
-            Legal:
-            •	Privacy Policy
-            •	Terms of Service
-            •	Cookie Policy
-        </div>
-        <div>
-            Stay Updated:
-            Subscribe to our newsletter: [code provided on next slide) Customer Service:
-            •	Help Center
-            © 2024 Endroit Sur. All Rights Reserved.
-        </div>
-        <div>
-            <img class="es-association-logo" src="images/the-property-ombudsman.svg" alt="Property Ombudsman Logo">
-            <img class="es-association-logo" src="images/arla.png" alt="Arla Propertymark logo">
-        </div>
+
 
 
 
 
 
     </section>
-</main>
+
+
+
 

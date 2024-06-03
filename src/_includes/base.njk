@@ -5,14 +5,67 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{ title }}</title>
 	<link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
+	<script src="{{ '/scripts/main.js' | url }}" type="module" defer></script>
+
 </head>
 <body>
-	<header class="es-logo">
-		<h1>{{ title }}</h1>
-		<span>Your Safespace</span>
-	</header>
+{#	<header class="es-logo">#}
+{#		<h1>{{ title }}</h1>#}
+{#		<h1>{{ title }}</h1>#}
+{#		<span class="strap">Your Safespace</span>#}
+{#	</header>#}
+
+<header class="nav-global-bgd" id="header">
+<div class="nav-global">
+		<div>
+			<span class="es-logo-header">
+			<h1>{{ title }}</h1>
+			<span class="strap">Your Safespace</span>
+			</span>
+		</div>
+	<span></span>
+
+
+	<button class="hamburger hamburger--spin" type="button" aria-label="Navigation menu" id="navButton">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+	</button>
+</div>
+</header>
+<nav aria-label="primary navigation">
+	<ul class="nav-primary" aria-expanded="false">
+		<li>
+			<a href="#home" class="nav-link" role="link" aria-label="Welcome to {{  title }}">Home</a>
+		</li>
+		<li>
+			<a href="#community" class="nav-link" role="link" aria-label="Join the Community">Community</a>
+		</li>
+		<li>
+			<a href="#overview" class="nav-link" aria-label="About endroit sûr">Overview</a>
+		</li>
+		<li>
+			<a href="#investment" class="nav-link" aria-label="Elevate your investment game">Investment</a>
+		</li>
+		<li>
+			<a href="#partners" class="nav-link" aria-label="Join the revolution">Partners</a>
+		</li>
+		<li>
+			<a href="#tenants" class="nav-link" aria-label="Discover your ideal home">Tenants</a>
+		</li>
+		<li>
+			<a href="#contact" class="nav-link" aria-label="Contact {{ title }}">Contact</a>
+		</li>
+	</ul>
+</nav>
+
+
 	<main>
 	{{ content | safe }}
 	</main>
+<footer>
+	© 2024 Endroit Sur. All Rights Reserved.
+</footer>
+
 </body>
 </html>
