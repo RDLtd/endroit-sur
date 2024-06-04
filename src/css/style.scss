@@ -8,6 +8,7 @@ $fw-normal: 400;
 $fw-bold: 600;
 $fw-black: 900;
 
+
 // Hamburger button
 $hamburger-padding            : 8px 12px ;
 $hamburger-layer-color        : $clr-primary;
@@ -19,7 +20,7 @@ $hamburger-line-border-radius : 2px !default;
 $hamburger-hover-trans-dur    : 0.15s !default;
 $hamburger-hover-trans-func   : linear !default;
 
-
+@use 'reset';
 
 * {
   margin: 0;
@@ -56,6 +57,9 @@ p {
   text-wrap: pretty;
   margin-bottom: 1rem;
 }
+strong {
+  font-weight: $fw-bold;
+}
 a {
   color: $clr-cta;
   text-decoration-thickness: 2px;
@@ -65,13 +69,6 @@ a {
   &:hover,
   &:focus-visible {
     color: darken($clr-cta, 15);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 3rem;
   }
 }
 
@@ -95,6 +92,13 @@ h3 {
   .strap {
     font-weight: $fw-normal;
   }
+  &.small {
+    h1 {
+      font-size: 2.5rem;
+    }
+    margin-top: 2rem;
+  }
+
   &-header {
     font-family: $ff-default;
     font-weight: $fw-bold;
@@ -175,6 +179,14 @@ header {
       margin-top: 2rem;
       color: $clr-primary;
     }
+  }
+  &-legal {
+    width: min($content-max-width, 100% - 4rem);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 5rem;
   }
 }
 .logo-grid {
@@ -267,7 +279,7 @@ ul {
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 501;
-  height: 4rem;
+  //height: 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
