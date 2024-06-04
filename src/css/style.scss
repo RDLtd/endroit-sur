@@ -118,12 +118,7 @@ h3 {
   max-width: 240px;
 }
 
-header {
-  //height: 5rem;
-  background-color: white;
-  position: fixed;
-  z-index: 200;
-}
+
 
 .content-section {
   //min-height: 100vh;
@@ -262,23 +257,29 @@ ul {
 }
 
 
-
+.nav-bar {
+  position: sticky;
+  z-index: 1000;
+  top: 5rem;
+  height: 2rem;
+  background-color: hsla(0, 0%, 0%, 20);
+}
 
 
 .nav-global-bgd {
-  position: fixed;
-  inset: 0 0 auto 0;
+  position: sticky;
+  inset: 12rem 0 auto 0;
   width: 100%;
   z-index: 500;
   height: 6rem;
-  opacity: 0;
+  opacity: 1;
   background-color: darken($clr-cta, 30);;
   transition: opacity 300ms ease-out;
 }
 .nav-global {
-  position: fixed;
-  inset: 0 0 auto 0;
-  z-index: 501;
+  //position: absolute;
+  //inset: 0rem 0 auto 0;
+  //z-index: 501;
   //height: 4rem;
   display: flex;
   align-items: center;
