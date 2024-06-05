@@ -4,10 +4,10 @@ export default function () {
     const header = document.getElementById('header');
     const navPanel = document.querySelector('.nav-primary');
     const navBtn = document.getElementById('navButton');
-    const scrollPadding = `${header.offsetHeight - 1}px`
+    //const scrollPadding = `${header.offsetHeight - 1}px`
 
 // Adjust scroll-padding to allow for the header
-    document.documentElement.style.setProperty('--scroll-padding', scrollPadding);
+    //document.documentElement.style.setProperty('--scroll-padding', scrollPadding);
 
 // Menu button
 

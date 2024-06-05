@@ -1,26 +1,8 @@
-$content-max-width: 1400px;
-$clr-text: hsl(0, 0%, 10%);
-$clr-primary: hsl(104, 57%, 24%);
-$clr-cta: hsl(207, 50%, 50%);
-$ff-default: system-ui, sans-serif;
-$fw-light: 200;
-$fw-normal: 400;
-$fw-bold: 600;
-$fw-black: 900;
-
-
-// Hamburger button
-$hamburger-padding            : 8px 12px ;
-$hamburger-layer-color        : $clr-primary;
-$hamburger-line-width         : 40px !default;
-$hamburger-line-height        : 4px !default;
-$hamburger-line-spacing       : 6px !default;
-$hamburger-line-color         : $clr-cta;
-$hamburger-line-border-radius : 2px !default;
-$hamburger-hover-trans-dur    : 0.15s !default;
-$hamburger-hover-trans-func   : linear !default;
-
+@use 'vars' as *;
 @use 'reset';
+
+
+
 
 * {
   margin: 0;
@@ -132,6 +114,7 @@ header {
   width: min($content-max-width, 100% - 4rem);
   margin-inline: auto;
   display: grid;
+  overflow: hidden;
   grid-template-columns: 1fr;
   gap: 2rem;
   margin-bottom: 12rem;
@@ -150,6 +133,8 @@ header {
   }
   .img-panel {
     height: 100%;
+    width: 100%;
+
     //background-color: red;
 
     img {
@@ -173,9 +158,12 @@ header {
     width: min($content-max-width, 100% - 4rem);
     margin-inline: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 2rem;
     margin-bottom: 5rem;
+    @media (min-width: 40em) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
     h2 {
       font-size: 2rem;
       margin-top: 2rem;
@@ -197,7 +185,7 @@ header {
 }
 .hero-section {
   position: relative;
-  height: 80vh;
+  height: 100svh;
   display: grid;
   //place-items: center;
   align-items: center;
@@ -274,7 +262,7 @@ ul {
   z-index: 500;
   height: 6rem;
   opacity: 0;
-  background-color: darken($clr-cta, 30);;
+  background-color: darken($clr-primary, 0);
   transition: opacity 300ms ease-out;
 }
 .nav-global {
@@ -344,7 +332,7 @@ ul {
   position: fixed;
   top: 8px; right: 8px;
   z-index: 500;
-  background-color: $hamburger-line-color;
+  background-color: white;
   border-radius: 4px;
   opacity: .85;
 

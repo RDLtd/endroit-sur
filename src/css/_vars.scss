@@ -1,0 +1,26 @@
+// Resets
+:root {
+  --scroll-padding: 8rem;
+}
+
+$content-max-width: 1400px;
+$clr-text: hsl(0, 0%, 10%);
+$clr-primary: hsl(104, 57%, 20%);
+$clr-cta: hsl(207, 50%, 50%);
+$ff-default: system-ui, sans-serif;
+$fw-light: 200;
+$fw-normal: 400;
+$fw-bold: 600;
+$fw-black: 900;
+
+
+// Hamburger button
+$hamburger-padding            : 8px 12px ;
+$hamburger-layer-color        : $clr-primary;
+$hamburger-line-width         : 40px !default;
+$hamburger-line-height        : 4px !default;
+$hamburger-line-spacing       : 6px !default;
+$hamburger-line-color         : $clr-cta;
+$hamburger-line-border-radius : 2px !default;
+$hamburger-hover-trans-dur    : 0.15s !default;
+$hamburger-hover-trans-func   : linear !default;
